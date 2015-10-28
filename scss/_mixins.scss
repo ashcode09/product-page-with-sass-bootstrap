@@ -1,0 +1,4 @@
+@mixin max-width-control($assigned-max-width) {
+	padding-left: $assigned-max-width * 0.05;
+	padding-right: $assigned-max-width * 0.05;
+}
