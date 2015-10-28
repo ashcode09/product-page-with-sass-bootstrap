@@ -1,0 +1,36 @@
+.language-bar {
+	background-color: $language-bar-color;
+	width: 100%;
+	padding: 10px 10% 10px 0;
+
+	.language-menu {
+		text-align: right;
+		color: $white;
+	}
+}
+
+.navigation-bar {
+	margin-bottom: 40px;
+	padding: 0 10% 0 10%;
+	background-color: $navbar-color;
+	border-radius: 0;
+	border: none;
+	min-height: 0px;
+
+	.navbar-item {
+		a {
+			color: $white;
+		}
+
+		a:hover {
+			background-color: transparent;
+			color: $mustard-yellow;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar-item {
+		width: 100%;
+	}
+}
