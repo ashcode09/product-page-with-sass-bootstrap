@@ -1,7 +1,13 @@
+/* Element colours */
+/* Colours */
+/* Structural Properties*/
 .language-bar {
   background-color: #2E2E2E;
   width: 100%;
-  padding: 10px 10% 10px 0;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .language-bar .language-menu {
   text-align: right;
@@ -9,8 +15,9 @@
 }
 
 .navigation-bar {
-  margin-bottom: 40px;
-  padding: 0 10% 0 10%;
+  margin-bottom: 70px;
+  padding-left: 15%;
+  padding-right: 15%;
   background-color: #424242;
   border-radius: 0;
   border: none;
@@ -25,8 +32,11 @@
 }
 
 @media (max-width: 767px) {
-  .navbar-item {
+  .navigation-bar .navbar-item {
     width: 100%;
+  }
+  .navigation-bar .navbar-item :not(.brand-img) {
+    border-bottom: 1px solid grey;
   }
 }
 .product-header {
@@ -37,9 +47,11 @@
 }
 .product-header .prod-header-headline {
   border-bottom: 1px solid;
+  padding-bottom: 5px;
 }
 .product-header .brief-prod-description {
   margin-bottom: 35px;
+  font-size: 13px;
 }
 .product-header .glyphicon-play-circle {
   color: #FACC2E;
@@ -49,8 +61,16 @@
 }
 
 @media (max-width: 991px) {
-  .product-header {
-    margin: 0 5% 0 5%;
+  .product-header .header-left {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .product-header .header-right {
+    margin: 0 15% 0 15%;
+    text-align: center;
+  }
+  .product-header .header-right .brief-prod-description {
+    max-width: 100%;
   }
   .product-header .header-img {
     width: 100%;
@@ -58,15 +78,35 @@
   }
 }
 .image-narrative-strip {
-  padding: 50px 9% 0 9%;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  padding-left: 15%;
+  padding-right: 15%;
   background-color: grey;
+  text-align: center;
+}
+.image-narrative-strip h3 {
+  font-size: 20px;
 }
 .image-narrative-strip .image-strip-img {
   width: 100%;
   max-width: 400px;
 }
 .image-narrative-strip .narrative-box {
-  max-width: 400px;
-  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
   color: white;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  margin-left: -20px;
+  margin-right: -20px;
+  max-height: 350px;
+}
+.carousel .item {
+  max-height: 350px;
+}
+.carousel .item img {
+  width: 100%;
 }

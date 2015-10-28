@@ -1,0 +1,9 @@
+@mixin max-width-control($assigned-max-width, $percentage: 5) {
+	padding-left: $assigned-max-width * $percentage / 100;
+	padding-right: $assigned-max-width * $percentage / 100;
+}
+
+@mixin general-side-padding($percentage: $padding-sides) {
+	padding-left: $percentage;
+	padding-right: $percentage;
+}
