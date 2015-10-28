@@ -1,7 +1,9 @@
 .image-narrative-strip {
-	padding: 50px 9% 30px 9%;
+	padding-top: 50px;
+	padding-bottom: 30px;
+	@include general-side-padding();
 	background-color: $light-grey;
-		text-align: center;
+	text-align: center;
 
 	h3 {
 		font-size: 20px;
