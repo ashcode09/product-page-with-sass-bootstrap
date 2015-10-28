@@ -1,5 +1,5 @@
 .image-narrative-strip {
-	padding: 50px 9% 0 9%;
+	padding: 50px 9% 30px 9%;
 	background-color: $light-grey;
 		text-align: center;
 
@@ -15,5 +15,6 @@
 	.narrative-box {
 		@include max-width-control($img-strip-width-limit);
 		color: $white;
+		margin-bottom: 20px;
 	}
 }

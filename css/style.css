@@ -25,8 +25,11 @@
 }
 
 @media (max-width: 767px) {
-  .navbar-item {
+  .navigation-bar .navbar-item {
     width: 100%;
+  }
+  .navigation-bar .navbar-item :not(.brand-img) {
+    border-bottom: 1px solid grey;
   }
 }
 .product-header {
@@ -68,7 +71,7 @@
   }
 }
 .image-narrative-strip {
-  padding: 50px 9% 0 9%;
+  padding: 50px 9% 30px 9%;
   background-color: grey;
   text-align: center;
 }
@@ -83,4 +86,5 @@
   padding-left: 20px;
   padding-right: 20px;
   color: white;
+  margin-bottom: 20px;
 }

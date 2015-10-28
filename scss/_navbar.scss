@@ -30,7 +30,14 @@
 }
 
 @media (max-width: 767px) {
-	.navbar-item {
-		width: 100%;
+	.navigation-bar {
+
+		.navbar-item {
+			width: 100%;
+
+			:not(.brand-img) {
+				border-bottom: 1px solid $light-grey;
+			}
+		}
 	}
 }
