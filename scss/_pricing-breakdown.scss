@@ -1,10 +1,98 @@
 .pricing-breakdown {
-	padding-top: 50px;
+	padding: 50px 0 50px 0;
 	background-color: #E6E6E6;
 
+	.breakdown-header {
+		font-size: 20px;
+	}
+
+	p:not(.breakdown-header) {
+		font-size: 13px;
+		padding-right: 10px;
+	}
+
 	.pricing-boxes {
+		min-width: 176px;
+		text-align: center;
 		background-color: $white;
+		padding: 0 0 $general-box-spacing 0;
 		margin-left: 10px;
 		margin-right: 10px;
+
+		.pricing-headers {
+			@include full-width-of-container;
+			padding: $general-box-spacing 2% $general-box-spacing 2%;
+			margin-bottom: $general-box-spacing;
+			background-color: $dark-grey;
+			color: $white;
+			font-weight: bold;
+		}
+
+		.licence-quants {
+			text-align: center;
+			width: 30%;
+
+			.btn-number {
+				@include full-width-of-container;
+				border: none;
+				padding: 0 0 0 0;
+				font-size: 20px;
+				color: $mustard-yellow;
+			}
+
+			input[readonly] {
+				background-color: $white;
+				text-align: center;
+				width: 35px;
+				padding: 0 5px;
+			}
+		}
+
+		.prices {
+			@include full-width-of-container;
+			padding: 0 10%;
+
+			p, h3 {
+				font-weight: bold;
+			}
+
+			h3 {
+				color: $mustard-yellow;
+			}
+		}
 	}
+}
+
+.savings-box {
+	text-align: center;
+	padding: $general-box-spacing 0;
+
+	h4 {
+		margin-bottom: $general-box-spacing + 10;
+	}
+
+	img {
+		width: 100%;
+		max-width: 200px;
+	}
+
+	.plus-box {
+		font-size: 50px;
+	}
+
+	p {
+
+		font-size: 13px;
+	}
+
+	.box-btn {
+		margin-top: $general-box-spacing;
+	}
+}
+
+.box-btn {
+	font-weight: bold;
+	padding: 10px $general-box-spacing;
+	background-color: $mustard-yellow;
+	border-radius: 0;
 }

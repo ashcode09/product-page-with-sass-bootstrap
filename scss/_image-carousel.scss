@@ -1,12 +1,12 @@
 .carousel {
 	margin: 0 -20px 0 -20px;
-  max-height: 300px;
+  max-height: 200px;
 
   .item {
-	  max-height: 300px;
+	  height: 200px;
 
   	img {
-	  	width: 100%;
+	  	@include full-width-of-container;
 	  }
   }
 }

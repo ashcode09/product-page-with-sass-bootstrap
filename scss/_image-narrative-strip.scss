@@ -2,21 +2,21 @@
 	padding-top: 50px;
 	padding-bottom: 30px;
 	@include general-side-padding();
-	background-color: $light-grey;
+	background-color: $grey;
 	text-align: center;
-
-	h3 {
-		font-size: 20px;
-	}
-
-	.image-strip-img {
-		width: 100%;
-		max-width: $img-strip-width-limit;
-	}
 
 	.narrative-box {
 		@include max-width-control($img-strip-width-limit);
 		color: $white;
 		margin-bottom: 20px;
+	}
+
+	h3.narrative-box {
+		font-size: 20px;
+	}
+	
+	.image-strip-img {
+		@include full-width-of-container;
+		max-width: $img-strip-width-limit;
 	}
 }

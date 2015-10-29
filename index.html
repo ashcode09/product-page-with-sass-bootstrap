@@ -96,39 +96,93 @@
         </a>
       </div>
 
-      <!-- PRICING BREAKDOWN -->
+      <!-- PRICING BREAKDOWN AND SAVINGS -->
       <div class="row pricing-breakdown">
         <div class="col-md-2"></div>
         <div class="col-md-2">
-          <h3>Pricing Breakdown</h3>
+          <p class="breakdown-header">Pricing Breakdown</p>
           <p>Select the package and options which are right for your business and click to subscribe.</p>
         </div>
         <div class="col-md-2 pricing-boxes">
-          <div>
+          <div class="pricing-headers">
             Small Business Premium
           </div>
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-sm-6">
               Licences
             </div>
-            <div class="col-md-6">
-              <button id="sbLessBtn" type="button" class="btn btn-default btn-number" data-type="minus" data-field="quant[1]"><span class="glyphicon glyphicon-minus"></span></button>
-              <input id="sbQuantity" type="text" class="form-control input-number" value="1" min="1" max="10"></input>
-              <button id="sbMoreBtn" type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]"><span class="glyphicon glyphicon-plus"></span></button>
+            <div class="col-sm-6 row">
+              <table>
+                <tr>
+                  <td class="licence-quants"><button id="sbLessBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="minus" data-field="quant[1]">-</button></td>
+                  <td class="licence-quants"><input id="sbQuantity" type="text" class="col-md-3 form-control input-number" value="1" min="1" max="10" readonly></input></td>
+                  <td class="licence-quants"><button id="sbMoreBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="plus" data-field="quant[1]">+</button></td>
+                </tr>
+              </table>
             </div>
-
-
-
-
-
+          </div>
+          <div class="row">
+            <div class="col-md-1 prices">
+              <h3>$100.80</h3>
+              <p>per year</p>
+              <button class="btn box-btn">Subscribe now</button>
+            </div>
           </div>
         </div>
         <div class="col-md-2 pricing-boxes">
-          $117.60
+          <div class="pricing-headers">
+            Midsize Business
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              Licences
+            </div>
+            <div class="col-sm-6 row">
+              <table>
+                <tr>
+                  <td class="licence-quants"><button id="mbLessBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="minus" data-field="quant[1]">-</button></td>
+                  <td class="licence-quants"><input id="mbQuantity" type="text" class="col-md-3 form-control input-number" value="1" min="1" max="10" readonly></input></td>
+                  <td class="licence-quants"><button id="mbMoreBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="plus" data-field="quant[1]">+</button></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-1 prices">
+              <h3>$117.60</h3>
+              <p>per year</p>
+              <button class="btn box-btn">Subscribe now</button>
+            </div>
+          </div>
         </div>
         <div class="col-md-2"></div>
         <div class="col-md-2"></div>
       </div>
+      <div class="row savings-box">
+        <h4 class="text-uppercase">Save with our Connect Plus bundle</h4>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-2">
+          <img src="images/office-365.png">
+          <p><b>Email Plus</b> (501-2,500) contacts</p>
+        </div>
+        <div class="col-md-2 plus-box">
+          <span>+</span>
+        </div>
+        <div class="col-md-2">
+          <img src="images/credit-hq.png">
+          <p><b>Email Plus</b> (501-2,500) contacts</p>
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-12">
+          <button class="btn box-btn">View bundle details</button>
+        </div>
+      </div>
+
+      
+
+
 
 
 
@@ -138,29 +192,6 @@
 
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
-
-
-    <script type="text/javascript">
-
-    $('#sbLessBtn').on("click", function() {
-      var currentValue = parseInt($('#sbQuantity').val());
-      if (currentValue > 1) {
-        var newValue = currentValue - 1;
-        $('#sbQuantity').val(newValue);
-      };
-    });
-
-    $('#sbMoreBtn').on("click", function() {
-      var currentValue = parseInt($('#sbQuantity').val());
-      if (currentValue < 10) {
-        var newValue = currentValue + 1;
-        $('#sbQuantity').val(newValue);
-      };
-    });
-
-    </script>
-
-
+    <script src="js/licence-buttons.js"></script>
   </body>
 </html>
