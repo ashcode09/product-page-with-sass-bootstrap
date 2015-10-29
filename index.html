@@ -1,7 +1,8 @@
 <!doctype html>
-<html>
+<html ng-app="productPage">
   <head>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="node_modules/font-awesome//css/font-awesome.min.css"></link>
     <link rel="stylesheet" href="css/style.css"></link>
   </head>
   <body>
@@ -96,12 +97,132 @@
         </a>
       </div>
 
+      <!-- PRICING BREAKDOWN AND SAVINGS -->
+      <div class="row pricing-breakdown">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+          <p class="breakdown-header">Pricing Breakdown</p>
+          <p>Select the package and options which are right for your business and click to subscribe.</p>
+        </div>
+        <div class="col-md-2 pricing-boxes">
+          <div class="pricing-headers">
+            Small Business Premium
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              Licences
+            </div>
+            <div class="col-sm-6 row">
+              <table>
+                <tr>
+                  <td class="licence-quants"><button id="sbLessBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="minus" data-field="quant[1]">-</button></td>
+                  <td class="licence-quants"><input id="sbQuantity" type="text" class="col-md-3 form-control input-number" value="1" min="1" max="10" readonly></input></td>
+                  <td class="licence-quants"><button id="sbMoreBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="plus" data-field="quant[1]">+</button></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-1 prices">
+              <h3>$100.80</h3>
+              <p>per year</p>
+              <button class="btn box-btn">Subscribe now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2 pricing-boxes">
+          <div class="pricing-headers">
+            Midsize Business
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              Licences
+            </div>
+            <div class="col-sm-6 row">
+              <table>
+                <tr>
+                  <td class="licence-quants"><button id="mbLessBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="minus" data-field="quant[1]">-</button></td>
+                  <td class="licence-quants"><input id="mbQuantity" type="text" class="col-md-3 form-control input-number" value="1" min="1" max="10" readonly></input></td>
+                  <td class="licence-quants"><button id="mbMoreBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="plus" data-field="quant[1]">+</button></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-1 prices">
+              <h3>$117.60</h3>
+              <p>per year</p>
+              <button class="btn box-btn">Subscribe now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+      </div>
+      <div class="row savings-box">
+        <h4 class="text-uppercase">Save with our Connect Plus bundle</h4>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-2">
+          <img src="images/office-365.png">
+          <p><b>Email Plus</b> (501-2,500) contacts</p>
+        </div>
+        <div class="col-md-2 plus-box">
+          <span>+</span>
+        </div>
+        <div class="col-md-2">
+          <img src="images/credit-hq.png">
+          <p><b>Email Plus</b> (501-2,500) contacts</p>
+        </div>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-12">
+          <button class="btn box-btn">View bundle details</button>
+        </div>
+      </div>
+
+      <!-- FEATURES -->
+      <div ng-controller="featuresController" class="row features">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-7">
+          <div class="row">
+            <h4>Features</h4>
+            <p>Select the package and options which are right for your business and click to subscribe.</p>
+          </div>
+          <div class="feature-table">
+            <div class="row feature-table-head">
+              <div class="col-md-4 each-head">Features</div>
+              <div class="col-md-4 each-head">Small Business Premium</div>
+              <div class="col-md-4 each-head">Midsize Business</div>
+            </div>
+            <div class="feature-table-body">
+              <div ng-repeat="eachFeature in features"class="row feature-table-rows">
+                <div class="col-md-4 each-box feature-box"><span class="fa fa-plus-square"></span> {{eachFeature.features}}</div>
+                <div class="col-md-4 each-box check-boxes"><span class="fa fa-check" ng-show="{{eachFeature.SBP}}"></span></div>
+                <div class="col-md-4 each-box check-boxes"><span class="fa fa-check" ng-show="{{eachFeature.MB}}"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
+      
+
+
+
+
 
 
 
     </div>
 
+    <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/product-app.js"></script>
+    <script src="js/features-controller.js"></script>
+    <script src="js/licence-buttons.js"></script>
   </body>
 </html>

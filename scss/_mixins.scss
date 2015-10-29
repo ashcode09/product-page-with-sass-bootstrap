@@ -7,3 +7,7 @@
 	padding-left: $percentage;
 	padding-right: $percentage;
 }
+
+@mixin full-width-of-container {
+	width: 100%;
+}

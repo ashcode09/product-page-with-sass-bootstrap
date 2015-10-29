@@ -1,0 +1,1 @@
+var productPage = angular.module('productPage', []);

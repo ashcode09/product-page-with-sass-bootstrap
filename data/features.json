@@ -1,0 +1,52 @@
+[
+	{
+		"features": "Business-class email",
+		"SBP": true,
+		"MB": true
+	},
+	{
+		"features": "Public website",
+		"SBP": true,
+		"MB": true
+	},
+	{
+		"features": "File Storage and sharing",
+		"SBP": true,
+		"MB": true
+	},
+	{
+		"features": "Intranet dite for your teams",
+		"SBP": true,
+		"MB": true
+	},
+	{
+		"features": "Site mailboxes",
+		"SBP": true,
+		"MB": true
+	},
+	{
+		"features": "Office Online",
+		"SBP": true,
+		"MB": true
+	},
+	{
+		"features": "Mobile apps for your devices",
+		"SBP": true,
+		"MB": true
+	},
+	{
+		"features": "Office applications",
+		"SBP": true,
+		"MB": true
+	},
+	{
+		"features": "Active Directory integration",
+		"SBP": false,
+		"MB": true
+	},
+	{
+		"features": "Self-service Business Intelligence",
+		"SBP": false,
+		"MB": true
+	}
+]

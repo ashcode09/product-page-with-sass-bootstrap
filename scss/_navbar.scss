@@ -12,14 +12,24 @@
 }
 
 .navigation-bar {
-	margin-bottom: 70px;
 	@include general-side-padding();
+	margin-bottom: 70px;
 	background-color: $navbar-color;
 	border-radius: 0;
 	border: none;
 	min-height: 0px;
 
 	.navbar-item {
+
+		@media (max-width: $x-small-screen) {
+			width: 100%;
+
+			:not(.brand-img) {
+				border-bottom: 1px solid $grey;
+				border-radius: 0px;
+			}
+		}
+
 		a {
 			color: $white;
 		}
@@ -27,19 +37,6 @@
 		a:hover {
 			background-color: transparent;
 			color: $mustard-yellow;
-		}
-	}
-}
-
-@media (max-width: 767px) {
-	.navigation-bar {
-
-		.navbar-item {
-			width: 100%;
-
-			:not(.brand-img) {
-				border-bottom: 1px solid $light-grey;
-			}
 		}
 	}
 }

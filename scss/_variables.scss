@@ -1,18 +1,37 @@
-/* Element colours */
-
-$language-bar-color: #2E2E2E;
-$navbar-color: #424242;
-
-
-
 /* Colours */
 
-$light-grey: grey;
+$darkest-gray: #2E2E2E;
+$dark-grey: #424242;
+$grey: grey;
+$lightest-grey: #EAEAEA;
 $white: white;
 $mustard-yellow: #FACC2E;
+
+
+/* Element colours */
+
+$language-bar-color: $darkest-gray;
+$navbar-color: $dark-grey;
+
 
 
 /* Structural Properties*/
 
 $padding-sides: 15%;
 $img-strip-width-limit: 400px;
+$general-box-spacing: 20px;
+
+
+
+
+/* Fonts */
+
+
+
+
+
+
+/* Screen Sizes */
+
+$small-screen: 991px;
+$x-small-screen: 767px;
