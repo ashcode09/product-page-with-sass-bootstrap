@@ -1,0 +1,48 @@
+.features {
+	padding: $general-box-spacing 0;
+	background-color: $lightest-grey;
+
+	.feature-table {
+		border-radius: 100px;
+
+		.feature-table-head {
+			background-color: $dark-grey;
+			color: $white;
+
+			.each-head {
+				padding: $general-box-spacing;
+			}
+		}
+
+		.feature-table-rows {
+			background-color: $white;
+
+			.feature-box {
+				padding: 10px;
+
+				.fa-plus-square {
+					color: $mustard-yellow;
+					font-size: 20px;
+				}
+			}
+
+			.check-boxes {
+				color: $mustard-yellow;
+				padding: 15px;
+			}
+
+			.fa-check {
+				font-size: 30px;
+			}
+		}
+
+		.each-head, .check-boxes {
+			text-align: center;
+		}
+
+		.each-box {
+			border-bottom: 1px solid $lightest-grey;
+			height: 51px;
+		}
+	}
+}

@@ -1,7 +1,8 @@
 <!doctype html>
-<html>
+<html ng-app="productPage">
   <head>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" href="node_modules/font-awesome//css/font-awesome.min.css"></link>
     <link rel="stylesheet" href="css/style.css"></link>
   </head>
   <body>
@@ -180,6 +181,33 @@
         </div>
       </div>
 
+      <!-- FEATURES -->
+      <div ng-controller="featuresController" class="row features">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-7">
+          <div class="row">
+            <h4>Features</h4>
+            <p>Select the package and options which are right for your business and click to subscribe.</p>
+          </div>
+          <div class="feature-table">
+            <div class="row feature-table-head">
+              <div class="col-md-4 each-head">Features</div>
+              <div class="col-md-4 each-head">Small Business Premium</div>
+              <div class="col-md-4 each-head">Midsize Business</div>
+            </div>
+            <div class="feature-table-body">
+              <div ng-repeat="eachFeature in features"class="row feature-table-rows">
+                <div class="col-md-4 each-box feature-box"><span class="fa fa-plus-square"></span> {{eachFeature.features}}</div>
+                <div class="col-md-4 each-box check-boxes"><span class="fa fa-check" ng-show="{{eachFeature.SBP}}"></span></div>
+                <div class="col-md-4 each-box check-boxes"><span class="fa fa-check" ng-show="{{eachFeature.MB}}"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+        </div>
+      </div>
       
 
 
@@ -190,8 +218,11 @@
 
     </div>
 
+    <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/product-app.js"></script>
+    <script src="js/features-controller.js"></script>
     <script src="js/licence-buttons.js"></script>
   </body>
 </html>
