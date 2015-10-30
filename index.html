@@ -27,13 +27,27 @@
 
     <!-- THE BASKET -->
     <div class="basket-container">
-      <div ng-show="basketShown" class="basket">
-        <ul ng-repeat="(typeOfSub, licenceQuant) in basket">
-          <li>{{typeOfSub}}, {{licenceQuant}}</li>
-        </ul>
+      <div ng-show="basketShown" class="row basket">
+        <div ng-repeat="(typeOfSub, licenceQuant) in basket">
+          <div class="col-md-7">{{typeOfSub}}</div>
+          <div class="col-md-2">{{licenceQuant}}</div>
+          <div class="col-md-1">
+            <div class="row">
+              <div ng-click="editBasket('add', typeOfSub)" class="col-md-12">+</div>
+              <div class="col-md-12" ng-click="editBasket('minus', typeOfSub)">-</div>
+            </div>
+          </div>
+        <div class="col-md-1 fa fa-trash-o" ng-click="deleteItemsFromBasket(typeOfSub)"></div>
+        </div>
         <div ng-if="isBasketEmpty()">There are no items in this basket.</div>
       </div>
     </div>
+
+
+    <script>
+
+
+    </script>
     
 
 

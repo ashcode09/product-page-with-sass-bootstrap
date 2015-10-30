@@ -47,9 +47,10 @@
   position: relative;
 }
 .basket-container .basket {
-  background-color: red;
+  background-color: #F2F2F2;
+  padding: 10px;
   min-height: 200px;
-  width: 250px;
+  width: 300px;
   position: absolute;
   top: 0;
   right: 0;

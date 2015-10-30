@@ -1,4 +1,7 @@
 productPage.controller('licenceController', ['$scope', function($scope) {
+	var maxItemQuantity = 10;
+	var minItemQuantity = 1;
+
 	$scope.arrayBasket = [];
 	$scope.basket = {};
 	$scope.basketShown = false;
@@ -20,5 +23,18 @@ productPage.controller('licenceController', ['$scope', function($scope) {
 
 	$scope.isBasketEmpty = function() {
 		return $.isEmptyObject($scope.basket)
+	};
+
+	$scope.editBasket = function(addOrMinus, whichLicence) {
+		if (addOrMinus == 'add' && $scope.basket[whichLicence] < maxItemQuantity) {
+			$scope.basket[whichLicence] = $scope.basket[whichLicence] + 1;
+		};
+		if (addOrMinus == 'minus' && $scope.basket[whichLicence] > minItemQuantity) {
+			$scope.basket[whichLicence] = $scope.basket[whichLicence] - 1;
+		};
+	};
+
+	$scope.deleteItemsFromBasket = function(whichLicence) {
+		delete $scope.basket[whichLicence];
 	};
 }]);
