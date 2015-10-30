@@ -1,4 +1,15 @@
-.basket {
+.basket-container {
 	background-color: red;
-	min-height: 200px;
+	position: relative;
+
+	.basket {
+		background-color: red;
+		min-height: 200px;
+		width: 250px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		margin-right: 13%;
+		z-index: 1;
+	}
 }

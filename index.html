@@ -25,14 +25,16 @@
       </ul>
     </nav>
 
-
     <!-- THE BASKET -->
-    <div ng-show="basketShown" class="basket">
-      <ul ng-repeat="(typeOfSub, licenceQuant) in basket">
-        <li>{{typeOfSub}}, {{licenceQuant}}</li>
-      </ul>
-      <div ng-if="isBasketEmpty()">There are no items in this basket.</div>
+    <div class="basket-container">
+      <div ng-show="basketShown" class="basket">
+        <ul ng-repeat="(typeOfSub, licenceQuant) in basket">
+          <li>{{typeOfSub}}, {{licenceQuant}}</li>
+        </ul>
+        <div ng-if="isBasketEmpty()">There are no items in this basket.</div>
+      </div>
     </div>
+    
 
 
 
