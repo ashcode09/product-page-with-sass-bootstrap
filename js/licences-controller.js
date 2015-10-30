@@ -15,5 +15,10 @@ productPage.controller('licenceController', ['$scope', function($scope) {
 		} else {
 			$scope.basketShown = false;
 		}
+		$scope.isBasketEmpty()
+	};
+
+	$scope.isBasketEmpty = function() {
+		return $.isEmptyObject($scope.basket)
 	};
 }]);
