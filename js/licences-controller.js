@@ -1,10 +1,19 @@
 productPage.controller('licenceController', ['$scope', function($scope) {
 	$scope.arrayBasket = [];
-	$scope.hashBasket = {'smallBusinessPremium': 0, 'midsizeBusiness': 0};
+	$scope.basket = {};
+	$scope.basketShown = false;
 
 
 	$scope.addLicencesToBasket = function(idOfQuantInputBox, whichLicence) {
 		var licenceQuantity = parseInt($(idOfQuantInputBox).val());
-		$scope.hashBasket[whichLicence] = licenceQuantity;
+		$scope.basket[whichLicence] = licenceQuantity;
+	};
+
+	$scope.showBasket = function() {
+		if ($scope.basketShown == false) {
+			$scope.basketShown = true;
+		} else {
+			$scope.basketShown = false;
+		}
 	};
 }]);
