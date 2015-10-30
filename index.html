@@ -98,7 +98,7 @@
       </div>
 
       <!-- PRICING BREAKDOWN AND SAVINGS -->
-      <div class="row pricing-breakdown">
+      <div ng-controller="licenceController" class="row pricing-breakdown">
         <div class="col-md-2"></div>
         <div class="col-md-2">
           <p class="breakdown-header">Pricing Breakdown</p>
@@ -115,9 +115,9 @@
             <div class="col-sm-6 row">
               <table>
                 <tr>
-                  <td class="licence-quants"><button id="sbLessBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="minus" data-field="quant[1]">-</button></td>
+                  <td class="licence-quants"><button id="sbLessBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="minus">-</button></td>
                   <td class="licence-quants"><input id="sbQuantity" type="text" class="col-md-3 form-control input-number" value="1" min="1" max="10" readonly></input></td>
-                  <td class="licence-quants"><button id="sbMoreBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="plus" data-field="quant[1]">+</button></td>
+                  <td class="licence-quants"><button id="sbMoreBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="plus">+</button></td>
                 </tr>
               </table>
             </div>
@@ -126,7 +126,7 @@
             <div class="col-md-1 prices">
               <h3>$100.80</h3>
               <p>per year</p>
-              <button class="btn box-btn">Subscribe now</button>
+              <button id="sbSubscribeBtn" class="btn box-btn" ng-click="addLicencesToBasket('#sbQuantity', 'smallBusinessPremium')">Subscribe now</button>
             </div>
           </div>
         </div>
@@ -141,9 +141,9 @@
             <div class="col-sm-6 row">
               <table>
                 <tr>
-                  <td class="licence-quants"><button id="mbLessBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="minus" data-field="quant[1]">-</button></td>
+                  <td class="licence-quants"><button id="mbLessBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="minus">-</button></td>
                   <td class="licence-quants"><input id="mbQuantity" type="text" class="col-md-3 form-control input-number" value="1" min="1" max="10" readonly></input></td>
-                  <td class="licence-quants"><button id="mbMoreBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="plus" data-field="quant[1]">+</button></td>
+                  <td class="licence-quants"><button id="mbMoreBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="plus">+</button></td>
                 </tr>
               </table>
             </div>
@@ -152,7 +152,7 @@
             <div class="col-md-1 prices">
               <h3>$117.60</h3>
               <p>per year</p>
-              <button class="btn box-btn">Subscribe now</button>
+              <button id="mbSubscribeBtn" class="btn box-btn" ng-click="addLicencesToBasket('#mbQuantity', 'midsizeBusiness')">Subscribe now</button>
             </div>
           </div>
         </div>
@@ -222,6 +222,7 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/product-app.js"></script>
+    <script src="js/licences-controller.js"></script>
     <script src="js/features-controller.js"></script>
     <script src="js/licence-buttons.js"></script>
   </body>
