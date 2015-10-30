@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome//css/font-awesome.min.css"></link>
     <link rel="stylesheet" href="css/style.css"></link>
   </head>
-  <body  ng-controller="licenceController">
+  <body  ng-controller="licenceAndBasketController">
 
     <!-- NAV BAR -->
     <div class="language-bar">
@@ -25,7 +25,7 @@
       </ul>
     </nav>
 
-    <!-- THE BASKET -->
+    <!-- BASKET -->
     <div class="basket-container">
       <div ng-show="basketShown" class="row basket">
         <div ng-repeat="(typeOfSub, licenceQuant) in basket">
@@ -43,14 +43,8 @@
       </div>
     </div>
 
-
-    <script>
-
-
-    </script>
-    
-
-
+    <!-- BASKET UPDATE NOTIFICATION -->
+    <div ng-show="basketUpdated" id="basket-update-notn" class="basket-update-notn" ng-click="basketUpdateNotificiationOff()">Basket updated <span class="fa fa-times"></span></div>
 
     <div class="container-fluid">
 
@@ -234,15 +228,13 @@
         <div class="col-md-3">
         </div>
       </div>
-      
-
-
-
-
+    
 
 
 
     </div>
+
+
 
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
@@ -251,5 +243,10 @@
     <script src="js/licences-controller.js"></script>
     <script src="js/features-controller.js"></script>
     <script src="js/licence-buttons.js"></script>
+    <script src="js/basket-notification-stick-on-scroll.js"></script>
+    
+
+
+
   </body>
 </html>
