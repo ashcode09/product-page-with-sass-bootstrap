@@ -7,6 +7,22 @@ productPage.controller('licenceAndBasketController', ['$scope', function($scope)
 	$scope.basketShown = false;
 	$scope.basketUpdated = false;
 
+	$scope.addOneLicence = function(id) {
+		var currentValue = parseInt($(id).val());
+	  if (currentValue < maxItemQuantity) {
+	    var newValue = currentValue + 1;
+	    $(id).val(newValue);
+	  };
+	};
+
+	$scope.minusOneLicence = function(id) {
+		var currentValue = parseInt($(id).val());
+	  if (currentValue > minItemQuantity) {
+	    var newValue = currentValue - 1;
+	    $(id).val(newValue);
+	  };
+	};
+
 	$scope.addLicencesToBasket = function(idOfQuantInputBox, whichLicence) {
 		var licenceQuantity = parseInt($(idOfQuantInputBox).val());
 		$scope.basket[whichLicence] = licenceQuantity;

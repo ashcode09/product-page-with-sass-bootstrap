@@ -135,9 +135,9 @@
             <div class="col-sm-6 row">
               <table>
                 <tr>
-                  <td class="licence-quants"><button id="sbLessBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="minus">-</button></td>
+                  <td class="licence-quants"><button id="sbLessBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="minus" ng-click="minusOneLicence('#sbQuantity')">-</button></td>
                   <td class="licence-quants"><input id="sbQuantity" type="text" class="col-md-3 form-control input-number" value="1" min="1" max="10" readonly></input></td>
-                  <td class="licence-quants"><button id="sbMoreBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="plus">+</button></td>
+                  <td class="licence-quants"><button id="sbMoreBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="plus" ng-click="addOneLicence('#sbQuantity')">+</button></td>
                 </tr>
               </table>
             </div>
@@ -161,9 +161,9 @@
             <div class="col-sm-6 row">
               <table>
                 <tr>
-                  <td class="licence-quants"><button id="mbLessBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="minus">-</button></td>
+                  <td class="licence-quants"><button id="mbLessBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="minus" ng-click="minusOneLicence('#mbQuantity')">-</button></td>
                   <td class="licence-quants"><input id="mbQuantity" type="text" class="col-md-3 form-control input-number" value="1" min="1" max="10" readonly></input></td>
-                  <td class="licence-quants"><button id="mbMoreBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="plus">+</button></td>
+                  <td class="licence-quants"><button id="mbMoreBtn" type="button" class="col-md-3 btn btn-default btn-number" data-type="plus" ng-click="addOneLicence('#mbQuantity')">+</button></td>
                 </tr>
               </table>
             </div>
@@ -240,9 +240,8 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/product-app.js"></script>
-    <script src="js/licences-controller.js"></script>
+    <script src="js/licence-and-basket-controller.js"></script>
     <script src="js/features-controller.js"></script>
-    <script src="js/licence-buttons.js"></script>
     <script src="js/basket-notification-stick-on-scroll.js"></script>
     
 
