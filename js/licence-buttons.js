@@ -1,3 +1,6 @@
+var maxItemQuantity = 10;
+var minItemQuantity = 1;
+
 $('#sbLessBtn').on("click", function() {
   minusOne('#sbQuantity');
 });
@@ -16,7 +19,7 @@ $('#mbMoreBtn').on("click", function() {
 
 function addOne(id) {
   var currentValue = parseInt($(id).val());
-  if (currentValue < 10) {
+  if (currentValue < maxItemQuantity) {
     var newValue = currentValue + 1;
     $(id).val(newValue);
   };
@@ -24,7 +27,7 @@ function addOne(id) {
 
 function minusOne(id) {
   var currentValue = parseInt($(id).val());
-  if (currentValue > 1) {
+  if (currentValue > minItemQuantity) {
     var newValue = currentValue - 1;
     $(id).val(newValue);
   };

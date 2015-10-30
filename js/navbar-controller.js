@@ -1,0 +1,3 @@
+productPage.controller('navbarController', function() {
+	
+});
