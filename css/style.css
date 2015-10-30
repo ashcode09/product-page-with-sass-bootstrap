@@ -17,9 +17,9 @@
 }
 
 .navigation-bar {
+  margin-bottom: 0;
   padding-left: 15%;
   padding-right: 15%;
-  margin-bottom: 70px;
   background-color: #424242;
   border-radius: 0;
   border: none;
@@ -42,8 +42,13 @@
   color: #FACC2E;
 }
 
+.basket {
+  background-color: red;
+  min-height: 200px;
+}
+
 .product-header {
-  margin-bottom: 60px;
+  margin: 60px 0;
 }
 @media (max-width: 991px) {
   .product-header .header-left {

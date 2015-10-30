@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="css/style.css"></link>
   </head>
   <body  ng-controller="licenceController">
-    
 
     <!-- NAV BAR -->
     <div class="language-bar">
@@ -25,7 +24,16 @@
         <li id="shoppingBasket" class="navbar-item" ng-click="showBasket()"><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span></a></li>
       </ul>
     </nav>
-    <div ng-show="basketShown" class="basket">{{basket}}</div>
+
+
+    <!-- THE BASKET -->
+    <div ng-show="basketShown" class="basket">
+      <ul ng-repeat="(typeOfSub, licenceQuant) in basket">
+        <li>{{typeOfSub}}, {{licenceQuant}}</li>
+      </ul>
+    </div>
+
+
 
     <div class="container-fluid">
 
@@ -127,7 +135,7 @@
             <div class="col-md-1 prices">
               <h3>$100.80</h3>
               <p>per year</p>
-              <button id="sbSubscribeBtn" class="btn box-btn" ng-click="addLicencesToBasket('#sbQuantity', 'smallBusinessPremium')">Subscribe now</button>
+              <button id="sbSubscribeBtn" class="btn box-btn" ng-click="addLicencesToBasket('#sbQuantity', 'Small Business Premium')">Subscribe now</button>
             </div>
           </div>
         </div>
@@ -153,7 +161,7 @@
             <div class="col-md-1 prices">
               <h3>$117.60</h3>
               <p>per year</p>
-              <button id="mbSubscribeBtn" class="btn box-btn" ng-click="addLicencesToBasket('#mbQuantity', 'midsizeBusiness')">Subscribe now</button>
+              <button id="mbSubscribeBtn" class="btn box-btn" ng-click="addLicencesToBasket('#mbQuantity', 'Midsize Business')">Subscribe now</button>
             </div>
           </div>
         </div>
