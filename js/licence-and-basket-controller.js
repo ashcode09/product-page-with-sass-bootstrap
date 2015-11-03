@@ -2,7 +2,6 @@ productPage.controller('licenceAndBasketController', ['$scope', function($scope)
 	var maxItemQuantity = 10;
 	var minItemQuantity = 1;
 
-	$scope.arrayBasket = [];
 	$scope.basket = {};
 	$scope.basketShown = false;
 	$scope.basketUpdated = false;

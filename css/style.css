@@ -1,8 +1,11 @@
+/* Variables */
 /* Colours */
 /* Element colours */
 /* Structural Properties*/
 /* Fonts */
 /* Screen Sizes */
+/* Mixins */
+/* Modules */
 .language-bar {
   background-color: #2E2E2E;
   width: 100%;
@@ -59,6 +62,7 @@
 }
 
 .basket-update-notn {
+  float: right;
   right: 0;
   margin-right: 13%;
   min-width: 100px;
@@ -66,14 +70,9 @@
   z-index: 1;
 }
 
-.basket-ntf-top-stick {
+.fix-to-top {
   position: fixed;
   top: 0;
-}
-
-.basket-ntf-navbar-stick {
-  position: absolute;
-  top: 85px;
 }
 
 .product-header {
@@ -276,4 +275,13 @@
 .features .feature-table .each-box {
   border-bottom: 1px solid #EAEAEA;
   height: 51px;
+}
+
+.tech-specs {
+  background-color: #424242;
+  color: white;
+  padding: 20px;
+}
+.tech-specs a {
+  color: #FACC2E;
 }

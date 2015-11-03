@@ -16,6 +16,7 @@
 }
 
 .basket-update-notn {
+	float: right;
 	right: 0;
 	margin-right: 13%;
 	min-width: 100px;
@@ -23,12 +24,7 @@
 	z-index: 1;
 }
 
-.basket-ntf-top-stick {
+.fix-to-top {
 	position: fixed;
 	top: 0;
-}
-
-.basket-ntf-navbar-stick {
-	position: absolute;
-	top: 85px;
 }
