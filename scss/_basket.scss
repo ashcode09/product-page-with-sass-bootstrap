@@ -21,14 +21,19 @@
 	min-width: 100px;
 	background-color: red;
 	z-index: 1;
-}
-
-.basket-ntf-top-stick {
 	position: fixed;
 	top: 0;
 }
 
-.basket-ntf-navbar-stick {
+.fix-to-navbar-bottom,
+.fix-to-navbar-bottom-small-screen {
 	position: absolute;
+}
+
+.fix-to-navbar-bottom {
 	top: 85px;
+}
+
+.fix-to-navbar-bottom-small-screen {
+	top: 250px;
 }
