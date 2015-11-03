@@ -16,24 +16,15 @@
 }
 
 .basket-update-notn {
+	float: right;
 	right: 0;
 	margin-right: 13%;
 	min-width: 100px;
 	background-color: red;
 	z-index: 1;
+}
+
+.fix-to-top {
 	position: fixed;
 	top: 0;
-}
-
-.fix-to-navbar-bottom,
-.fix-to-navbar-bottom-small-screen {
-	position: absolute;
-}
-
-.fix-to-navbar-bottom {
-	top: 85px;
-}
-
-.fix-to-navbar-bottom-small-screen {
-	top: 250px;
 }
