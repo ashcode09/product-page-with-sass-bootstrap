@@ -7,7 +7,7 @@
   </head>
   <body  ng-controller="licenceAndBasketController">
 
-    <!-- NAV BAR -->
+    <!-- LANGUAGE AND NAV BARS -->
     <div id="language-bar" class="language-bar">
       <div class="language-menu">
         <span class="glyphicon glyphicon-globe"></span> EN <span class="glyphicon glyphicon-menu-down"></span>
@@ -44,7 +44,10 @@
     </div>
 
     <!-- BASKET UPDATE NOTIFICATION -->
-    <div ng-show="basketUpdated" id="basket-update-notn" class="basket-update-notn" ng-click="basketUpdateNotificiationOff()">Basket updated <span class="fa fa-times"></span></div>
+    <div ng-show="basketUpdated" id="basket-update-notn" class="basket-update-notn" ng-click="basketUpdateNotificiationOff()">
+      Basket updated
+      <span class="fa fa-times"></span>
+    </div>
 
     <div class="container-fluid">
 
@@ -84,27 +87,15 @@
       <!-- IMAGE CAROUSEL -->
       <div id="image-carousel" class="carousel slide hidden-xs" data-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-target="#image-carousel" data-slide-to="0" class="active"></li>
-          <li data-target="#image-carousel" data-slide-to="1"></li>
-          <li data-target="#image-carousel" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
           <div class="item active">
             <img src="images/carousel-image-1.png" alt="...">
-            <div class="carousel-caption">
-              First Image
-            </div>
           </div>
           <div class="item">
             <img src="images/carousel-image-2.png" alt="...">
-            <div class="carousel-caption">
-              Second Image
-            </div>
           </div><div class="item">
             <img src="images/carousel-image-3.png" alt="...">
-            <div class="carousel-caption">
-              Third Image
-            </div>
           </div>
         </div>
         <a class="left carousel-control" href="#image-carousel" role="button" data-slide="prev">
@@ -228,7 +219,32 @@
         <div class="col-md-3">
         </div>
       </div>
-    
+
+      <!-- TECH SPECS -->
+      <div class="row tech-specs">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+          <h3>Tech specs</h3>
+          <p>Find out what you need to run Constant Contact below.</p>
+          <p><b>Operating Systems Supported</b></p>
+          <ul>
+            <li>Windows XP</li>
+            <li>Windows Vista</li>
+            <li>Windows 7 and higher</li>
+            <li>Mac 10.4 and higher</li>
+          </ul>
+          <p><b>Note:</b> You could experience issues if you are using Internet Explorer on XP.</p>
+          <p><b>Browsers supported</b></p>
+          <p>Constant Contact will support the browser versions below. If you're using an unsupported browser, you'll see a message notifying you.</p>
+          <ul>
+            <li>Firefox: current version and 3 most recent versions (automatically updated for most users)</li>
+            <li>Internet Explorer 9, Internet Explorer 10 and Internet Explorer 11...</li>
+          </ul>
+          <a href="#"><b>View Tech details</b></a>
+        </div>
+      </div>
+
 
 
 

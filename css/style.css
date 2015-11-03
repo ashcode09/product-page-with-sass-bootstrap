@@ -276,3 +276,12 @@
   border-bottom: 1px solid #EAEAEA;
   height: 51px;
 }
+
+.tech-specs {
+  background-color: #424242;
+  color: white;
+  padding: 20px;
+}
+.tech-specs a {
+  color: #FACC2E;
+}
