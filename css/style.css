@@ -285,3 +285,61 @@
 .tech-specs a {
   color: #FACC2E;
 }
+
+.video-playback {
+  padding: 50px 0px;
+  margin-bottom: 200px;
+}
+.video-playback .outer-table {
+  display: table;
+  border: 1px solid black;
+}
+.video-playback .outer-table .table-columns {
+  padding: 0px;
+  vertical-align: middle;
+  display: table-row;
+}
+.video-playback .outer-table .table-tabs {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 1% 2%;
+  height: 65px;
+  font-size: 12px;
+  width: 10%;
+}
+@media (max-width: 767px) {
+  .video-playback .outer-table .table-tabs .table-tabs {
+    display: table-cell;
+  }
+}
+.video-playback .outer-table .first-tab {
+  border-left: 0px;
+}
+.video-playback .outer-table .table-view {
+  border-top: 0px;
+  position: relative;
+  top: 65px;
+  overflow: scroll;
+}
+@media (min-width: 767px) {
+  .video-playback .outer-table .table-columns {
+    height: 325px;
+  }
+  .video-playback .outer-table .table-tabs {
+    display: block;
+    padding: 10px 20px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    width: 100%;
+  }
+  .video-playback .outer-table .first-tab {
+    border-top: 0px;
+  }
+  .video-playback .outer-table .table-view {
+    top: 0px;
+    border-left: 0px;
+    height: 325px;
+  }
+}

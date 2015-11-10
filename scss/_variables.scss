@@ -17,6 +17,10 @@ $navbar-color: $dark-grey;
 $padding-sides: 15%;
 $img-strip-width-limit: 400px;
 $general-box-spacing: 20px;
+$table-tab-height: 65px;
+$table-height: $table-tab-height * 5;
+$none: 0px;
+$thin-black-border: 1px solid black;
 
 /* Fonts */
 
@@ -24,3 +28,6 @@ $general-box-spacing: 20px;
 
 $small-screen: 991px;
 $x-small-screen: 767px;
+
+
+
