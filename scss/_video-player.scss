@@ -1,4 +1,5 @@
 .video-playback {
+	padding: 50px 0px;
 
 	.outer-table {
 		display: table;
@@ -17,6 +18,15 @@
 			height: $table-tab-height;
 			font-size: 12px;
 			width: 10%;
+			background: -webkit-linear-gradient($lightest-grey, $white);
+		  background: -o-linear-gradient($lightest-grey, $white);
+			background: -moz-linear-gradient($lightest-grey, $white);
+			background: linear-gradient($lightest-grey, $white);
+	  	cursor: pointer;
+
+			a {
+		  	color: black;
+		  }
 
 			@media (max-width: $x-small-screen) {
 				.table-tabs {
@@ -25,15 +35,31 @@
 			}
 		}
 
+		.table-tabs:hover {
+
+			a {
+		  	color: $mustard-yellow;
+		  	text-decoration: none;
+			}
+		}
+
 		.first-tab {
 			border-left: $none;
 		}
 
+		.active-tab {
+			background: none;
+	  	background-color: $white;
+	  	border-bottom: 0px;
+
+	  	a {
+	  		color: $mustard-yellow;
+	  	}
+	  }
+
 		.table-view {
 			border-top: $none;
-			position: relative;
-			top: $table-tab-height;
-			overflow: scroll;
+			overflow-y: scroll;
 		}
 	}
 
@@ -52,6 +78,11 @@
 				border-top: $thin-black-border;
 				border-right: $thin-black-border;
 				width: 100%;
+				font-size: 18px;
+			}
+
+			.active-tab {
+				border-right: 0px;
 			}
 
 			.first-tab {
@@ -59,22 +90,9 @@
 			}
 
 			.table-view {
-				top: 0px;
 				border-left: $none;
 				height: $table-height;
-			}
-
-				
+			}	
 		}
 	}
-
-
-
-
-
-
-	padding: 50px 0px;
-	margin-bottom: 200px;
-
-	
 }

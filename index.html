@@ -260,20 +260,20 @@
                   <table class="left-column">
                     <tbody>
                       <tr>
-                        <td class="table-tabs first-tab">
-                          <a ng-click="changeView('helpView')">Help <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
+                        <td id="helpTab" class="table-tabs first-tab active-tab" ng-click="changeView('helpView')">
+                          <a>Help <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
                         </td>
-                        <td class="table-tabs">
-                          <a ng-click="changeView('showView')">Show <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
+                        <td id="showTab" class="table-tabs" ng-click="changeView('showView')">
+                          <a>Show <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
                         </td>
-                        <td class="table-tabs">
-                          <a ng-click="changeView('adviceView')">Additional Advice <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
+                        <td id="adviceTab" class="table-tabs" ng-click="changeView('adviceView')">
+                          <a>Additional Advice <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
                         </td>
-                        <td class="table-tabs">
-                          <a ng-click="changeView('infoView')">Info <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
+                        <td id="infoTab" class="table-tabs" ng-click="changeView('infoView')">
+                          <a>Info <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
                         </td>
-                        <td class="table-tabs">
-                          <a ng-click="changeView('chooseView')">Choose <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
+                        <td id="chooseTab" class="table-tabs" ng-click="changeView('chooseView')">
+                          <a>Choose <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
                         </td>
                       </tr>
                     </tbody>
@@ -332,7 +332,32 @@
     <script src="js/features-controller.js"></script>
     <script src="js/basket-notification-style.js"></script>
     <script src="js/video-playback-controller.js"></script>
-    <script src="js/set-height-of-table-view.js"></script>
+
+
+
+
+    <script>
+
+    $('.left-column').on("click", function(element) {
+      var tabId = '';
+      if (element.toElement.className.indexOf("table-tabs") !== -1) {
+        tabId = element.toElement.id;
+      } else if (element.toElement.tagName == 'A') {
+        tabId = element.toElement.parentElement.id;
+      } else {
+        tabId = element.toElement.parentElement.parentElement.id;
+      }
+      var tabIdSearchTerm = '#' + tabId;
+      $('.active-tab').removeClass('active-tab');
+      $(tabIdSearchTerm).addClass('active-tab');
+    })
+
+
+
+
+
+
+    </script>
     
 
 
