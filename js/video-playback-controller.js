@@ -1,4 +1,4 @@
-productPage.controller('videoPlaybackController', ['$scope', function($scope) {
+productPage.controller('videoPlaybackController', ['$scope', '$element', function($scope, $element) {
 	$scope.views = {
 		helpView: true,
 		showView: false,
@@ -6,6 +6,8 @@ productPage.controller('videoPlaybackController', ['$scope', function($scope) {
 		infoView: false,
 		chooseView: false,
 	};
+
+	console.log($element)
 
 	$scope.changeView = function(viewToSee) {
 		for (var view in $scope.views) {
@@ -16,4 +18,28 @@ productPage.controller('videoPlaybackController', ['$scope', function($scope) {
 			};
 		};
 	};
+
+
+
+	$('.left-column').on("click", function(element) {
+      var tabId = '';
+      if (element.toElement.className.indexOf("table-tabs") !== -1) {
+        tabId = element.toElement.id;
+      } else if (element.toElement.tagName == 'A') {
+        tabId = element.toElement.parentElement.id;
+      } else {
+        tabId = element.toElement.parentElement.parentElement.id;
+      }
+      var tabIdSearchTerm = '#' + tabId;
+      $('.active-tab').removeClass('active-tab');
+      $(tabIdSearchTerm).addClass('active-tab');
+    })
+
+	$scope.printElement = function(element) {
+		console.log(element)
+	}
+
+
+
+
 }]);

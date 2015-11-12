@@ -305,10 +305,10 @@
   height: 65px;
   font-size: 12px;
   width: 10%;
-  background: -webkit-linear-gradient(#EAEAEA, white);
-  background: -o-linear-gradient(#EAEAEA, white);
-  background: -moz-linear-gradient(#EAEAEA, white);
-  background: linear-gradient(#EAEAEA, white);
+  background: -webkit-linear-gradient(#d1d1d1, white);
+  background: -o-linear-gradient(#d1d1d1, white);
+  background: -moz-linear-gradient(#d1d1d1, white);
+  background: linear-gradient(#d1d1d1, white);
   cursor: pointer;
 }
 .video-playback .outer-table .table-tabs a {
@@ -362,4 +362,9 @@
     border-left: 0px;
     height: 325px;
   }
+}
+
+.additional-info {
+  background-color: #EAEAEA;
+  padding: 30px 0px;
 }

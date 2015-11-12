@@ -18,10 +18,10 @@
 			height: $table-tab-height;
 			font-size: 12px;
 			width: 10%;
-			background: -webkit-linear-gradient($lightest-grey, $white);
-		  background: -o-linear-gradient($lightest-grey, $white);
-			background: -moz-linear-gradient($lightest-grey, $white);
-			background: linear-gradient($lightest-grey, $white);
+			background: -webkit-linear-gradient(darken($lightest-grey, 10%), $white);
+		  background: -o-linear-gradient(darken($lightest-grey, 10%), $white);
+			background: -moz-linear-gradient(darken($lightest-grey, 10%), $white);
+			background: linear-gradient(darken($lightest-grey, 10%), $white);
 	  	cursor: pointer;
 
 			a {
