@@ -245,6 +245,113 @@
         </div>
       </div>
 
+      <!-- VIDEO PLAYBACK -->
+      <div ng-controller="videoPlaybackController" class="row video-playback">
+        <div class="col-sm-2">
+        </div>
+        <div class="col-sm-8">
+          <h3>Lorem ipsum</h3>
+          <div class="outer-table">
+            <div>
+            </div>
+            <div>
+              <div class="both-columns">
+                <div class="col-xs-12 col-sm-2 table-columns">
+                  <table id="leftColumn" class="left-column" ng-activetab>
+                    <tbody>
+                      <tr>
+                        <td id="helpTab" class="table-tabs first-tab active-tab" ng-click="changeView('helpView')">
+                          <a>Help <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
+                        </td>
+                        <td id="showTab" class="table-tabs" ng-click="changeView('showView')">
+                          <a>Show <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
+                        </td>
+                        <td id="adviceTab" class="table-tabs" ng-click="changeView('adviceView')">
+                          <a>Additional Advice <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
+                        </td>
+                        <td id="infoTab" class="table-tabs" ng-click="changeView('infoView')">
+                          <a>Info <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
+                        </td>
+                        <td id="chooseTab" class="table-tabs" ng-click="changeView('chooseView')">
+                          <a>Choose <span class="hidden-xs glyphicon glyphicon-chevron-right"></span><span class="visible-xs glyphicon glyphicon-chevron-down"></span></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>  
+                </div>
+                <div class="col-sm-10 table-view">
+                  <div ng-show="views.helpView">
+                    <p>Try-hard organic health goth pitchfork +1 poutine. Everyday carry swag try-hard kitsch neutra direct trade. Try-hard polaroid waistcoat shabby chic aesthetic green juice. YOLO chartreuse forage organic swag bushwick. 3 wolf moon twee biodiesel seitan venmo put a bird on it, roof party messenger bag. Chambray aesthetic viral selfies irony ennui, meditation asymmetrical mustache salvia green juice polaroid farm-to-table pinterest cornhole. Pop-up church-key gentrify migas, tilde williamsburg etsy tofu blue bottle 8-bit mlkshk.</p>
+                    <p>Four dollar toast quinoa plaid, normcore letterpress shabby chic cred knausgaard venmo craft beer mumblecore artisan. Cred vice brunch, meditation fashion axe messenger bag before they sold out cliche cray hashtag truffaut cornhole. Lumbersexual literally you probably haven't heard of them, franzen tattooed umami butcher crucifix cold-pressed mixtape pinterest. Marfa cronut schlitz blog ugh. Mumblecore farm-to-table squid before they sold out cardigan banh mi. Tacos ethical chicharrones, tousled williamsburg heirloom blue bottle scenester franzen helvetica put a bird on it banh mi 90's disrupt. Freegan messenger bag intelligentsia organic, photo booth four dollar toast mlkshk typewriter vegan.</p>
+                  </div>
+                  <div ng-show="views.showView">
+                    <p><b><span class="text-uppercase">Show</span> - Identify the customer need</b></p>
+                    <div class="row">
+                      <div class="col-md-5">
+                        VIDEO HERE
+                      </div>
+                      <div class="col-md-7">
+                        <p><b>Which customers are suitable?</b></p>
+                        <p>Almost all customers, as it can be used by any business that has a computer that uses a Windows or Mac operating system. For example, a graphic designer might want to back up their designs and portfolio. Or a solicitor might back up all their legal documents.</p>
+                        <p><b>What problems does the app sole for customers?</b></p>
+                        <p>A business could be at serious risk if a computer gets lost, damaged or stolen with all their business information on it.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div ng-show="views.adviceView">
+                    <p>Four dollar toast quinoa plaid, normcore letterpress shabby chic cred knausgaard venmo craft beer mumblecore artisan. Cred vice brunch, meditation fashion axe messenger bag before they sold out cliche cray hashtag truffaut cornhole. Lumbersexual literally you probably haven't heard of them, franzen tattooed umami butcher crucifix cold-pressed mixtape pinterest. Marfa cronut schlitz blog ugh. Mumblecore farm-to-table squid before they sold out cardigan banh mi. Tacos ethical chicharrones, tousled williamsburg heirloom blue bottle scenester franzen helvetica put a bird on it banh mi 90's disrupt. Freegan messenger bag intelligentsia organic, photo booth four dollar toast mlkshk typewriter vegan.</p>
+                    <p>Seitan bushwick yuccie master cleanse meggings sriracha shabby chic. Gluten-free chia meggings meh lo-fi brunch, next level pour-over mlkshk salvia offal tacos crucifix. Brunch ramps humblebrag ennui typewriter. Stumptown listicle cronut scenester. Thundercats slow-carb letterpress roof party seitan, hoodie master cleanse shabby chic biodiesel blue bottle mumblecore vice. Farm-to-table normcore XOXO paleo. Ethical tumblr skateboard, blue bottle cronut slow-carb bicycle rights try-hard post-ironic seitan.</p>
+                    <p>Swag you probably haven't heard of them shoreditch, 90's banjo small batch messenger bag letterpress gluten-free banh mi direct trade. Deep v knausgaard lumbersexual XOXO, salvia meggings taxidermy mixtape umami asymmetrical. Yr bushwick XOXO raw denim shabby chic, organic tousled. Fingerstache schlitz beard, literally umami migas skateboard bicycle rights. Health goth bitters heirloom single-origin coffee vinyl tofu small batch, synth etsy art party ugh. Pop-up forage fap whatever. Four dollar toast roof party brunch kinfolk, before they sold out waistcoat venmo cronut truffaut slow-carb 8-bit yr humblebrag fingerstache microdosing.</p>
+                  </div>
+                  <div ng-show="views.infoView">
+                    <p>Seitan bushwick yuccie master cleanse meggings sriracha shabby chic. Gluten-free chia meggings meh lo-fi brunch, next level pour-over mlkshk salvia offal tacos crucifix. Brunch ramps humblebrag ennui typewriter. Stumptown listicle cronut scenester. Thundercats slow-carb letterpress roof party seitan, hoodie master cleanse shabby chic biodiesel blue bottle mumblecore vice. Farm-to-table normcore XOXO paleo. Ethical tumblr skateboard, blue bottle cronut slow-carb bicycle rights try-hard post-ironic seitan.</p>
+                    <p>Swag you probably haven't heard of them shoreditch, 90's banjo small batch messenger bag letterpress gluten-free banh mi direct trade. Deep v knausgaard lumbersexual XOXO, salvia meggings taxidermy mixtape umami asymmetrical. Yr bushwick XOXO raw denim shabby chic, organic tousled. Fingerstache schlitz beard, literally umami migas skateboard bicycle rights. Health goth bitters heirloom single-origin coffee vinyl tofu small batch, synth etsy art party ugh. Pop-up forage fap whatever. Four dollar toast roof party brunch kinfolk, before they sold out waistcoat venmo cronut truffaut slow-carb 8-bit yr humblebrag fingerstache microdosing.</p>
+                  </div>
+                  <div ng-show="views.chooseView">
+                    <p>Try-hard organic health goth pitchfork +1 poutine. Everyday carry swag try-hard kitsch neutra direct trade. Try-hard polaroid waistcoat shabby chic aesthetic green juice. YOLO chartreuse forage organic swag bushwick. 3 wolf moon twee biodiesel seitan venmo put a bird on it, roof party messenger bag. Chambray aesthetic viral selfies irony ennui, meditation asymmetrical mustache salvia green juice polaroid farm-to-table pinterest cornhole. Pop-up church-key gentrify migas, tilde williamsburg etsy tofu blue bottle 8-bit mlkshk.</p>
+                    <p>Seitan bushwick yuccie master cleanse meggings sriracha shabby chic. Gluten-free chia meggings meh lo-fi brunch, next level pour-over mlkshk salvia offal tacos crucifix. Brunch ramps humblebrag ennui typewriter. Stumptown listicle cronut scenester. Thundercats slow-carb letterpress roof party seitan, hoodie master cleanse shabby chic biodiesel blue bottle mumblecore vice. Farm-to-table normcore XOXO paleo. Ethical tumblr skateboard, blue bottle cronut slow-carb bicycle rights try-hard post-ironic seitan.</p>
+                    <p>Swag you probably haven't heard of them shoreditch, 90's banjo small batch messenger bag letterpress gluten-free banh mi direct trade. Deep v knausgaard lumbersexual XOXO, salvia meggings taxidermy mixtape umami asymmetrical. Yr bushwick XOXO raw denim shabby chic, organic tousled. Fingerstache schlitz beard, literally umami migas skateboard bicycle rights. Health goth bitters heirloom single-origin coffee vinyl tofu small batch, synth etsy art party ugh. Pop-up forage fap whatever. Four dollar toast roof party brunch kinfolk, before they sold out waistcoat venmo cronut truffaut slow-carb 8-bit yr humblebrag fingerstache microdosing.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ADDITIONAL INFO -->
+      <div class="row additional-info">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4">
+          <video id="info-video" src=""></video>
+        </div>
+        <div class="col-md-4">
+          <h3>Additional info</h3>
+          <p><b>Which customers are suitable?</b></p>
+          <p>Almost all customers, as it can be used by any business that has a computer that uses a Windows or Mac operating system. For example, a graphic designed might want to back up their designs and portfolio. Or a solicitor might back up all their legal documents.</p>
+          <p><b>What problems does the app solve for customers?</b></p>
+          <p>A business could be at risk if a computer gets lost, damaged or stolen with all their business information on it.</p>
+        </div>
+      </div>
+
+      <!-- Features Description -->
+      <div class="row feature-desc">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4">
+          Get Creative
+          Choose from dozens of beautiful template designs and customise the colours, fonts, images and text to match your business' brand.
+          Search engine friendly
+          All mono.net sites are optimized to give your site the best chance of rating well on search engines.
+          Essential analytics
+          View key stats on how your site is performing including visitor
+        </div>
+        <div class="col-md-4">
+        </div>
+      </div>
+
+
 
 
 
@@ -259,7 +366,8 @@
     <script src="js/licence-and-basket-controller.js"></script>
     <script src="js/features-controller.js"></script>
     <script src="js/basket-notification-style.js"></script>
-    
+    <script src="js/video-playback-controller.js"></script>
+    <script src="js/active-tab-directive.js"></script>
 
 
 
